@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Linq;
 using MLAgents;
 
-
+//リポジトリ同期のテスト
 
 public class GridAcademy : Academy
 {
