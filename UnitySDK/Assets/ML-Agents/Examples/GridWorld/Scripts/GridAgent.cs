@@ -52,22 +52,29 @@ public class GridAgent : Agent
         var positionZ = (int) transform.position.z;
         var maxPosition = academy.gridSize - 1;
 
-        if (positionX == 0)
+        Vector3 targetPos = transform.position;
+        Collider[] blockTest = Physics.OverlapBox(targetPos, new Vector3(0.3f, 0.3f, 0.3f));
+
+        if (positionX == 0 ||
+            blockTest.Where(col => col.gameObject.CompareTag("sWall")).ToArray().Length == 1)
         {
             SetActionMask(Left);
         }
 
-        if (positionX == maxPosition)
+        if (positionX == maxPosition ||
+            blockTest.Where(col => col.gameObject.CompareTag("sWall")).ToArray().Length == 1)
         {
             SetActionMask(Right);
         }
 
-        if (positionZ == 0)
+        if (positionZ == 0 ||
+            blockTest.Where(col => col.gameObject.CompareTag("sWall")).ToArray().Length == 1)
         {
             SetActionMask(Down);
         }
 
-        if (positionZ == maxPosition)
+        if (positionZ == maxPosition ||
+            blockTest.Where(col => col.gameObject.CompareTag("sWall")).ToArray().Length == 1)
         {
             SetActionMask(Up);
         }
