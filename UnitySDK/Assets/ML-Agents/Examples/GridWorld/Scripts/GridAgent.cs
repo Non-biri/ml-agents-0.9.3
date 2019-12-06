@@ -102,16 +102,20 @@ public class GridAgent : Agent
         }
 
         Collider[] blockTest = Physics.OverlapBox(targetPos, new Vector3(0.3f, 0.3f, 0.3f));
-        if (blockTest.Where(col => col.gameObject.CompareTag("wall")).ToArray().Length == 0)
+
+        if (blockTest.Where(col => col.gameObject.CompareTag("wall")).ToArray().Length == 0 &&
+            blockTest.Where(col => col.gameObject.CompareTag("sWall")).ToArray().Length == 0)
         {
             transform.position = targetPos;
 
             ////////////////////////////////////////////////////////////////////////////////////
             ///追加分
+            /*
             if (blockTest.Where(col => col.gameObject.CompareTag("sWall")).ToArray().Length == 1)
             {
                 SetReward(-0.01f);
             }
+            */
             if (blockTest.Where(col => col.gameObject.CompareTag("exReword")).ToArray().Length == 1)
             {
                 SetReward(0.01f);
