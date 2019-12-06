@@ -183,7 +183,7 @@ public class GridAcademy : Academy
         }
         //int配列にコピー
         int[] numbersA = Enumerable.ToArray(numbers);
-        
+
         for (int i = 0; i < players.Length; i++)
         {
             //gridSizeが5でnumbersA[i]が8なら[1,3]の位置に配置される
