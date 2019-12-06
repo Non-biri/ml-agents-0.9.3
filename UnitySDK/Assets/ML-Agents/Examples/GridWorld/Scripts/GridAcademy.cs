@@ -91,8 +91,19 @@ public class GridAcademy : Academy
         //各要素の数をリスト化した後int型の配列playersにコピーし処理しやすくする
         List<int> playersList = new List<int>();
 
+        //配列mappingの内容をplayersListに入れることで改造する部分を可能な限り減らす
+        for (int i = 0; i < mapping.GetLength(0); i++)
+        {
+            for(int j =0; i< mapping.GetLength(1); j++)
+            {
+                playersList.Add(mapping[i,j]);
+            }
+        }
+
         //各値に従い、〇＃×＋の配置数をリスト化する
         ////////////////////////////////////////////////////////////////////////////////////
+        //
+        /*
         for (int i = 0; i < (int)resetParameters["numExReword"]; i++)
         {
             playersList.Add(4);
