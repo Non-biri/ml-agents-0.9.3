@@ -38,6 +38,21 @@ public class GridAcademy : Academy
     GameObject sE;
     GameObject sW;
 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///迷路のマッピング処理
+    ///agentPref：0, goalPref：1, pitPref：2, WallPref：3, ExReword：4
+    public int[,] maping = new int[,] {  {0,3,2,9,9,3,9,9,9,4},
+                                        {9,3,3,3,9,3,9,3,3,3},
+                                        {9,9,9,3,9,3,9,9,3,2},
+                                        {3,3,9,3,9,3,3,9,3,9},
+                                        {3,9,9,9,9,9,9,9,9,9},
+                                        {9,9,3,3,3,9,3,3,3,9},
+                                        {9,3,3,4,3,9,9,3,4,9},
+                                        {9,9,3,9,3,3,9,9,9,3},
+                                        {3,9,3,9,3,9,9,3,9,3},
+                                        {3,9,9,9,3,2,3,3,9,1}};
+
+
     public override void InitializeAcademy()
     {
         gridSize = (int)resetParameters["gridSize"];
