@@ -114,7 +114,7 @@ public class GridAcademy : Academy
             playersList.Add(3);
         }
         ////////////////////////////////////////////////////////////////////////////////////
-        
+
         for (int i = 0; i < (int)resetParameters["numObstacles"]; i++)
         {
             playersList.Add(2);
@@ -124,7 +124,8 @@ public class GridAcademy : Academy
         {
             playersList.Add(1);
         }
- 
+        */
+
         //リストを配列化
         players = playersList.ToArray();
 
