@@ -62,7 +62,7 @@ public class GridAcademy : Academy
         cam = camObject.GetComponent<Camera>();
 
         //objectsの種類として登録。agentPref：0, goalPref：1, pitPref：2, WallPref：3, ExReword：4で指定する
-        objects = new GameObject[5] {agentPref, goalPref, pitPref, sWallPref, ExReword};
+        objects = new GameObject[5] { agentPref, goalPref, pitPref, sWallPref, ExReword };
 
         agentCam = GameObject.Find("agentCam").GetComponent<Camera>();
 
@@ -82,8 +82,8 @@ public class GridAcademy : Academy
     /// </summary>
     public void SetEnvironment()
     {
-        cam.transform.position = new Vector3(-((int)resetParameters["gridSize"] - 1) / 2f, 
-                                             (int)resetParameters["gridSize"] * 1.25f, 
+        cam.transform.position = new Vector3(-((int)resetParameters["gridSize"] - 1) / 2f,
+                                             (int)resetParameters["gridSize"] * 1.25f,
                                              -((int)resetParameters["gridSize"] - 1) / 2f);
         cam.orthographicSize = ((int)resetParameters["gridSize"] + 5f) / 2f;
 
