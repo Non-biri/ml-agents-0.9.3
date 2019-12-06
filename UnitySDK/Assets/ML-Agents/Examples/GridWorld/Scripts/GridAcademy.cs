@@ -55,7 +55,10 @@ public class GridAcademy : Academy
 
     public override void InitializeAcademy()
     {
-        gridSize = (int)resetParameters["gridSize"];
+        //gridSizeは入力値ではなく10に固定
+        //gridSize = (int)resetParameters["gridSize"];
+        gridSize = 10;
+
         cam = camObject.GetComponent<Camera>();
 
         //objectsの種類として登録。agentPref：0, goalPref：1, pitPref：2, WallPref：3, ExReword：4で指定する
