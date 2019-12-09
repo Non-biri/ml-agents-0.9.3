@@ -112,12 +112,12 @@ public class GridAgent : Agent
 
             ////////////////////////////////////////////////////////////////////////////////////
             ///追加分
-            /*
+            
             if (blockTest.Where(col => col.gameObject.CompareTag("sWall")).ToArray().Length == 1)
             {
-                SetReward(-0.01f);
+                SetReward(-0.05f);
             }
-            */
+ 
             if (blockTest.Where(col => col.gameObject.CompareTag("exReword")).ToArray().Length == 1)
             {
                 SetReward(0.01f);
