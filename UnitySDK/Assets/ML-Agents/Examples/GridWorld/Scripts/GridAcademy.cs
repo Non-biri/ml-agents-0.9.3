@@ -194,14 +194,17 @@ public class GridAcademy : Academy
             //int x = (numbersA[i]) / gridSize;
             //int y = (numbersA[i]) % gridSize;
             //インスタンス化
-            GameObject actorObj = Instantiate(objects[players[i]]);
-            actorObj.transform.position = new Vector3(x, -0.25f, y);
-            actorObjs.Add(actorObj);
+            if (players[i] != 9)
+            {
+                GameObject actorObj = Instantiate(objects[players[i]]);
+                actorObj.transform.position = new Vector3(x, -0.25f, y);
+                actorObjs.Add(actorObj);
+            }
         }
 
         //環境の範囲に入るように0.05ずらす処理
-        int x_a = (players.Length) / gridSize;
-        int y_a = (players.Length) % gridSize;
+        int x_a = players.Length / gridSize;
+        int y_a = players.Length % gridSize;
         trueAgent.transform.position = new Vector3(x_a, -0.25f, y_a);
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
