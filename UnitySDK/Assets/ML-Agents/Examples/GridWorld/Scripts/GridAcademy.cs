@@ -94,7 +94,7 @@ public class GridAcademy : Academy
         //配列mappingの内容をplayersListに入れることで改造する部分を可能な限り減らす
         for (int i = 0; i < mapping.GetLength(0); i++)
         {
-            for(int j =0; i< mapping.GetLength(1); j++)
+            for(int j =0; j< mapping.GetLength(1); j++)
             {
                 playersList.Add(mapping[i,j]);
             }
