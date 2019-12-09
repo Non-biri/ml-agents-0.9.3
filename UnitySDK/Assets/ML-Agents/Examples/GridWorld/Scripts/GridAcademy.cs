@@ -126,7 +126,7 @@ public class GridAcademy : Academy
         }
         */
 
-        //リストを配列化
+        //リストを一次元配列化
         players = playersList.ToArray();
 
         //5/10=0.5m,10/10=1m,つまりは1マス0.1m.
