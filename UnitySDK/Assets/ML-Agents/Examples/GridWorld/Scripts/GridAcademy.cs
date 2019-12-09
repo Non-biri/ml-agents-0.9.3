@@ -188,8 +188,11 @@ public class GridAcademy : Academy
         {
             //gridSizeが5でnumbersA[i]が8なら[1,3]の位置に配置される
             //注意！ここでのyは画像処理での2Dの見方に従っている。Unity上ではyはz軸に代入する
-            int x = (numbersA[i]) / gridSize;
-            int y = (numbersA[i]) % gridSize;
+            int x = i / gridSize;
+            int y = i % gridSize;
+            //
+            //int x = (numbersA[i]) / gridSize;
+            //int y = (numbersA[i]) % gridSize;
             //インスタンス化
             GameObject actorObj = Instantiate(objects[players[i]]);
             actorObj.transform.position = new Vector3(x, -0.25f, y);
