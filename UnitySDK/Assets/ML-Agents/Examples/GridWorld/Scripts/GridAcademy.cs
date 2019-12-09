@@ -200,8 +200,8 @@ public class GridAcademy : Academy
         }
 
         //環境の範囲に入るように0.05ずらす処理
-        int x_a = (numbersA[players.Length]) / gridSize;
-        int y_a = (numbersA[players.Length]) % gridSize;
+        int x_a = (players.Length) / gridSize;
+        int y_a = (players.Length) % gridSize;
         trueAgent.transform.position = new Vector3(x_a, -0.25f, y_a);
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
