@@ -176,13 +176,13 @@ public class GridAcademy : Academy
         HashSet<int> numbers = new HashSet<int>();
 
         //numbersの数がplayers＋1より大きくなるまで
-        while (numbers.Count < players.Length + 1)
-        {
+        //while (numbers.Count < players.Length + 1)
+        //{
             //0～gridSize^2の範囲でランダムな値をセット
-            numbers.Add(Random.Range(0, gridSize * gridSize));
-        }
+        //    numbers.Add(Random.Range(0, gridSize * gridSize));
+        //}
         //int配列にコピー
-        int[] numbersA = Enumerable.ToArray(numbers);
+        //int[] numbersA = Enumerable.ToArray(numbers);
 
         for (int i = 0; i < players.Length; i++)
         {
