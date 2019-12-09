@@ -173,7 +173,7 @@ public class GridAcademy : Academy
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         ///各GameObjectをランダムな位置に配置するための処理
 
-        HashSet<int> numbers = new HashSet<int>();
+        //HashSet<int> numbers = new HashSet<int>();
 
         //numbersの数がplayers＋1より大きくなるまで
         //while (numbers.Count < players.Length + 1)
