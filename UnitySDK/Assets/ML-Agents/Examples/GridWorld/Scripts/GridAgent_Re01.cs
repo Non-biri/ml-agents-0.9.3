@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Linq;
 using MLAgents;
 
-public class GridAgent : Agent
+public class GridAgent_Re01 : Agent
 {
     [Header("Specific to GridWorld")]
     private GridAcademy academy;
