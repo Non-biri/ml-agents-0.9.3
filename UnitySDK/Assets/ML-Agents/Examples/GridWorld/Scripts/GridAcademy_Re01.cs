@@ -5,7 +5,7 @@ using MLAgents;
 
 //リポジトリ同期のテスト
 
-public class GridAcademy : Academy
+public class GridAcademy_Re01 : Academy
 {
     // 各GameObject型の変数は、宣言だけして中身はUnityエディタ上で設定できる
     // これによりソース上では任意のGameObjectは宣言するだけで使えるようになる
