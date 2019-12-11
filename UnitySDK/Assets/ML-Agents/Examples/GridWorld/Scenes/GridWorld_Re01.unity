@@ -137,19 +137,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2047662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 506d4052eefa14ec9bbb356e3669043d, type: 3}
+  m_Script: {fileID: 11500000, guid: b8f569d488fceb948858f516c21e0813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   broadcastHub:
-    broadcastingBrains:
-    - {fileID: 11400000, guid: 2c1d51b7167874f31beda0b0cf0af468, type: 2}
-    _brainsToControl:
-    - {fileID: 11400000, guid: 2c1d51b7167874f31beda0b0cf0af468, type: 2}
+    broadcastingBrains: []
+    _brainsToControl: []
   maxSteps: 0
   trainingConfiguration:
     width: 84
     height: 84
-    qualityLevel: 0
+    qualityLevel: 1
     timeScale: 20
     targetFrameRate: -1
   inferenceConfiguration:
@@ -159,17 +157,7 @@ MonoBehaviour:
     timeScale: 1
     targetFrameRate: 60
   resetParameters:
-    resetParameters:
-    - key: gridSize
-      value: 10
-    - key: numObstacles
-      value: 1
-    - key: numGoals
-      value: 1
-    - key: numExReword
-      value: 1
-    - key: numWalls
-      value: 5
+    resetParameters: []
   actorObjs: []
   players: 
   trueAgent: {fileID: 858783320}
@@ -600,6 +588,29 @@ GameObject:
   m_PrefabParentObject: {fileID: 1657514749044530, guid: 628960e910f094ad1909ecc88cc8016d,
     type: 2}
   m_PrefabInternal: {fileID: 1477921759}
+--- !u!114 &858783321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 858783320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03c34e8f2f49840439e5959670648ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brain: {fileID: 11400000, guid: 2c1d51b7167874f31beda0b0cf0af468, type: 2}
+  agentParameters:
+    agentCameras: []
+    agentRenderTextures:
+    - {fileID: 8400000, guid: 114608d5384404f89bff4b6f88432958, type: 2}
+    maxStep: 150
+    resetOnDone: 1
+    onDemandDecision: 1
+    numberOfActionsBetweenDecisions: 1
+  timeBetweenDecisionsAtInference: 0.15
+  renderCamera: {fileID: 489340228}
+  maskActions: 1
 --- !u!1 &918893358
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,7 +1084,8 @@ Prefab:
       propertyPath: agentParameters.maxStep
       value: 150
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114143683117020968, guid: 628960e910f094ad1909ecc88cc8016d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 628960e910f094ad1909ecc88cc8016d, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1553342942
