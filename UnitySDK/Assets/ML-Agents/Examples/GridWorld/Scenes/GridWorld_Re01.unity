@@ -143,6 +143,7 @@ MonoBehaviour:
   broadcastHub:
     broadcastingBrains:
     - {fileID: 11400000, guid: 2c1d51b7167874f31beda0b0cf0af468, type: 2}
+    - {fileID: 11400000, guid: 8096722eb0a294871857e202e0032082, type: 2}
     _brainsToControl: []
   maxSteps: 0
   trainingConfiguration:
@@ -162,7 +163,7 @@ MonoBehaviour:
   actorObjs: []
   players: 
   trueAgent: {fileID: 858783320}
-  gridSize: 0
+  gridSize: 10
   camObject: {fileID: 99095112}
   agentPref: {fileID: 1657514749044530, guid: 628960e910f094ad1909ecc88cc8016d, type: 2}
   goalPref: {fileID: 1508142483324970, guid: 1ec4e4e96e7514d45b7ebc3ba5a9a481, type: 2}
@@ -605,7 +606,7 @@ MonoBehaviour:
     agentCameras: []
     agentRenderTextures:
     - {fileID: 8400000, guid: 114608d5384404f89bff4b6f88432958, type: 2}
-    maxStep: 150
+    maxStep: 0
     resetOnDone: 1
     onDemandDecision: 1
     numberOfActionsBetweenDecisions: 1
