@@ -6,7 +6,7 @@ using MLAgents;
 public class GridAgent_Re01 : Agent
 {
     [Header("Specific to GridWorld")]
-    private GridAcademy academy;
+    private GridAcademy_Re01 academy;
     public float timeBetweenDecisionsAtInference;
     private float timeSinceDecision;
 
@@ -27,7 +27,7 @@ public class GridAgent_Re01 : Agent
 
     public override void InitializeAgent()
     {
-        academy = FindObjectOfType(typeof(GridAcademy)) as GridAcademy;
+        academy = FindObjectOfType(typeof(GridAcademy_Re01)) as GridAcademy_Re01;
     }
 
     public override void CollectObservations()
