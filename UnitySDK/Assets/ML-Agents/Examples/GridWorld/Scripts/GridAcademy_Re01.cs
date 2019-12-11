@@ -139,9 +139,16 @@ public class GridAcademy_Re01 : Academy
             }
         }
 
-        int x_a = players.Length / gridSize;
+        //エージェントの配置
+        int position = 10;
+        int x_a = players.Length / gridSize - position;
         int y_a = players.Length % gridSize;
         trueAgent.transform.position = new Vector3(x_a, -0.25f, y_a);
+
+    }
+
+    public void DeleteExReword()
+    {
 
     }
 
