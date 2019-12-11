@@ -14,7 +14,7 @@ public class GridAcademy_Re01 : Academy
 
     public GameObject trueAgent;
 
-    public int gridSize;
+    public int gridSize = 10;
 
     public GameObject camObject;
     Camera cam;
@@ -51,7 +51,7 @@ public class GridAcademy_Re01 : Academy
     public override void InitializeAcademy()
     {
 
-        gridSize = 10;
+        //gridSize = 10;
 
         cam = camObject.GetComponent<Camera>();
 
