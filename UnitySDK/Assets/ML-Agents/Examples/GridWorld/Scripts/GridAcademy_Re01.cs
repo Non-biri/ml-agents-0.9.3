@@ -73,10 +73,9 @@ public class GridAcademy_Re01 : Academy
     /// </summary>
     public void SetEnvironment()
     {
-        cam.transform.position = new Vector3(-((int)resetParameters["gridSize"] - 1) / 2f,
-                                             (int)resetParameters["gridSize"] * 1.25f,
-                                             -((int)resetParameters["gridSize"] - 1) / 2f);
-        cam.orthographicSize = ((int)resetParameters["gridSize"] + 5f) / 2f;
+        cam.transform.position = new Vector3(-(gridSize - 1) / 2f,gridSize * 1.25f,-(gridSize - 1) / 2f);
+
+        cam.orthographicSize = (gridSize + 5f) / 2f;
 
         List<int> playersList = new List<int>();
 
