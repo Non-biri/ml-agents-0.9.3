@@ -121,6 +121,7 @@ public class GridAgent_Re01 : Agent
             if (blockTest.Where(col => col.gameObject.CompareTag("exReword")).ToArray().Length == 1)
             {
                 SetReward(0.01f);
+                academy.DeleteExReword();
             }
             ////////////////////////////////////////////////////////////////////////////////////
 
