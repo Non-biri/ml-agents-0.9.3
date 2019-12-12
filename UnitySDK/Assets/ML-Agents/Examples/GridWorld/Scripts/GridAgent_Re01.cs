@@ -110,21 +110,16 @@ public class GridAgent_Re01 : Agent
         {
             transform.position = targetPos;
 
-            ////////////////////////////////////////////////////////////////////////////////////
-            ///追加分
-            
+            // 各オブジェクトの判定
             if (blockTest.Where(col => col.gameObject.CompareTag("sWall")).ToArray().Length == 1)
             {
                 SetReward(-0.05f);
             }
- 
             if (blockTest.Where(col => col.gameObject.CompareTag("exReword")).ToArray().Length == 1)
             {
                 SetReward(0.01f);
                 academy.DeleteExReword();
             }
-            ////////////////////////////////////////////////////////////////////////////////////
-
             if (blockTest.Where(col => col.gameObject.CompareTag("goal")).ToArray().Length == 1)
             {
                 Done();
