@@ -147,9 +147,16 @@ public class GridAcademy_Re01 : Academy
 
     }
 
-    public void DeleteExReword()
+    public void DestroyExReword(Collider collider)
     {
-
+        foreach (GameObject actor in actorObjs)
+        {
+            if (actor == collider.gameObject)
+            {
+                DestroyImmediate(actor);
+                Debug.Log("Destroy：exReword");
+            }
+        }
     }
 
     public override void AcademyStep()
