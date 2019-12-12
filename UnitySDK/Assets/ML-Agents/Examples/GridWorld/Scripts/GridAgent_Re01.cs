@@ -118,7 +118,6 @@ public class GridAgent_Re01 : Agent
             if (blockTest.Where(col => col.gameObject.CompareTag("exReword")).ToArray().Length == 1)
             {
                 SetReward(0.01f);
-                academy.DeleteExReword();
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("goal")).ToArray().Length == 1)
             {
@@ -142,6 +141,12 @@ public class GridAgent_Re01 : Agent
     public void FixedUpdate()
     {
         WaitTimeInference();
+    }
+
+    void onCllision(Collision collision)
+    {
+        if (collision.gameObject.name == "exReword")
+            Destroy(gameObject);
     }
 
     private void WaitTimeInference()
