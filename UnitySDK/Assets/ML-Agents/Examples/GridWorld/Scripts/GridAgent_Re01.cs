@@ -171,4 +171,10 @@ public class GridAgent_Re01 : Agent
             }
         }
     }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.name == "exReword")
+            academy.DestroyExReword(collider);
+    }
 }
