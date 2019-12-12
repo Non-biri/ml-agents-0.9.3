@@ -147,12 +147,6 @@ public class GridAgent_Re01 : Agent
         WaitTimeInference();
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.name == "exReword")
-            Destroy(gameObject);
-    }
-
     private void WaitTimeInference()
     {
         if(renderCamera != null)
