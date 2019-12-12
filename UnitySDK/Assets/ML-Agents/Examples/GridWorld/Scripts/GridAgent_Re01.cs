@@ -114,20 +114,24 @@ public class GridAgent_Re01 : Agent
             if (blockTest.Where(col => col.gameObject.CompareTag("sWall")).ToArray().Length == 1)
             {
                 SetReward(-0.05f);
+                Debug.Log("Reward：-0.05f");
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("exReword")).ToArray().Length == 1)
             {
                 SetReward(0.01f);
+                Debug.Log("Reward：0.01f");
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("goal")).ToArray().Length == 1)
             {
                 Done();
                 SetReward(1f);
+                Debug.Log("Reward：1f");
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("pit")).ToArray().Length == 1)
             {
                 Done();
                 SetReward(-1f);
+                Debug.Log("Reward：-1f");
             }
         }
     }
@@ -143,7 +147,7 @@ public class GridAgent_Re01 : Agent
         WaitTimeInference();
     }
 
-    void destroyExReword(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "exReword")
             Destroy(gameObject);
