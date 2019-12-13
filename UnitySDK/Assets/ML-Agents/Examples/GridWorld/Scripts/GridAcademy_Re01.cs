@@ -147,6 +147,7 @@ public class GridAcademy_Re01 : Academy
 
     }
 
+    /*
     public void DestroyExReword(Collider collider)
     {
         foreach (GameObject actor in actorObjs)
@@ -158,6 +159,7 @@ public class GridAcademy_Re01 : Academy
             }
         }
     }
+    */
 
     public override void AcademyStep()
     {
