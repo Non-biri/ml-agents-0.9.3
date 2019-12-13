@@ -16,7 +16,7 @@ public class DestryExReword : MonoBehaviour {
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.name == "exReword")
-            Destroy(collider);
+            Destroy(this.gameObject);
         Debug.Log("Destroy：exReword");
     }
 }
