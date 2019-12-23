@@ -4,4 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/ML-Agents/Examples/GridWorld/Scenes/GridWorld_Re01.unity
+    guid: 3b794021cb0a5cb40ac8f6cad7045508
