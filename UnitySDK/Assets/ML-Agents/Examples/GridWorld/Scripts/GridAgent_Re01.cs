@@ -114,12 +114,12 @@ public class GridAgent_Re01 : Agent
             if (blockTest.Where(col => col.gameObject.CompareTag("sWall")).ToArray().Length == 1)
             {
                 SetReward(-0.05f);
-                Debug.Log("Reward：-0.05f");
+                Debug.Log("Reward：-0.1f");
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("exReword")).ToArray().Length == 1)
             {
                 SetReward(0.01f);
-                Debug.Log("Reward：0.1f");
+                Debug.Log("Reward：0.2f");
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("goal")).ToArray().Length == 1)
             {
