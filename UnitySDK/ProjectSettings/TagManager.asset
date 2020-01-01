@@ -28,6 +28,8 @@ TagManager:
   - stone
   - exReword
   - sWall
+  - Undefined
+  - mappingCube
   layers:
   - Default
   - TransparentFX
