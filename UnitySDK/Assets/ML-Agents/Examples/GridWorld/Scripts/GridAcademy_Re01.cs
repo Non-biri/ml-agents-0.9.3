@@ -24,7 +24,7 @@ public class GridAcademy_Re01 : Academy
     public GameObject goalPref;
     public GameObject pitPref;
     public GameObject sWallPref;
-    public GameObject ExReword;
+    public GameObject exReword;
 
     GameObject[] objects;
 
@@ -55,7 +55,7 @@ public class GridAcademy_Re01 : Academy
 
         cam = camObject.GetComponent<Camera>();
 
-        objects = new GameObject[5] { agentPref, goalPref, pitPref, sWallPref, ExReword };
+        objects = new GameObject[5] { agentPref, goalPref, pitPref, sWallPref, exReword };
 
         agentCam = GameObject.Find("agentCam").GetComponent<Camera>();
 
