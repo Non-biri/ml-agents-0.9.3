@@ -21,6 +21,7 @@ public class GridAgent_Re01 : Agent
 
     //Parameters
     public float acquisitionRate;
+    private float stepReword;
     public float shorteningRate;
     public float graspingRate;
     //
@@ -86,6 +87,8 @@ public class GridAgent_Re01 : Agent
     public override void AgentAction(float[] vectorAction, string textAction)
     {
         AddReward(-0.01f);
+        stepReword += -0.01f;
+
         int action = Mathf.FloorToInt(vectorAction[0]);
 
         Vector3 targetPos = transform.position;
@@ -146,6 +149,7 @@ public class GridAgent_Re01 : Agent
     public override void AgentReset()
     {
         academy.AcademyReset();
+        stepReword = 0f;
     }
 
     public void FixedUpdate()
