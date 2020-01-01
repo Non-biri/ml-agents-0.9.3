@@ -56,7 +56,7 @@ public class GridAcademy_Re01 : Academy
 
         cam = camObject.GetComponent<Camera>();
 
-        objects = new GameObject[5] { agentPref, goalPref, pitPref, sWallPref, exReword };
+        objects = new GameObject[6] { agentPref, goalPref, pitPref, sWallPref, exReword, mappingCube };
 
         agentCam = GameObject.Find("agentCam").GetComponent<Camera>();
 
