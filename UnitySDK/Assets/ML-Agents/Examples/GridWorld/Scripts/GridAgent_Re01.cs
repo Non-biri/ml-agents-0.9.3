@@ -20,11 +20,11 @@ public class GridAgent_Re01 : Agent
     public bool maskActions = true;
 
     //Parameters
-    public float acquisitionRate;
-    private float stepReword;
-    public float shorteningRate;
-    public float graspingRate;
-    //
+    public float acquisitionRate;   //追加報酬を得た時のバイアス
+    public float shorteningRate;    //時間に応じて目標達成時にかかるバイアス
+    public float graspingRate;      //マッピング度合いによってかかるバイアス
+                                    //
+    private float stepReword;       //
 
     private const int NoAction = 0;  // do nothing!
     private const int Up = 1;
