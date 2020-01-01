@@ -25,6 +25,7 @@ public class GridAcademy_Re01 : Academy
     public GameObject pitPref;
     public GameObject sWallPref;
     public GameObject exReword;
+    public GameObject mappingCube;
 
     GameObject[] objects;
 
