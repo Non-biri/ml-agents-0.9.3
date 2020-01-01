@@ -17,6 +17,6 @@ public class DestryExReword : MonoBehaviour {
     {
         //if (collider.gameObject.name == "exReword")
         Destroy(this.gameObject);
-        Debug.Log("Destroy：exReword");
+        //Debug.Log("Destroy：exReword");
     }
 }
