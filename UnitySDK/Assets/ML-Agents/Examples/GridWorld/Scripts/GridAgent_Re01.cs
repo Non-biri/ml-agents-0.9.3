@@ -120,6 +120,11 @@ public class GridAgent_Re01 : Agent
             transform.position = targetPos;
 
             // 各オブジェクトの判定
+            if (blockTest.Where(col => col.gameObject.CompareTag("mappingCube")).ToArray().Length == 1)
+            {
+                SetReward(0.05f);
+                Debug.Log("Reward：-0.1f");
+            }
             if (blockTest.Where(col => col.gameObject.CompareTag("sWall")).ToArray().Length == 1)
             {
                 SetReward(-0.1f);
