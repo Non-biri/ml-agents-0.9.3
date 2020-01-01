@@ -142,10 +142,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   broadcastHub:
     broadcastingBrains:
-    - {fileID: 11400000, guid: 2c1d51b7167874f31beda0b0cf0af468, type: 2}
+    - {fileID: 11400000, guid: d41665f2fb9ad6a469449c2eae467e78, type: 2}
     - {fileID: 11400000, guid: 8096722eb0a294871857e202e0032082, type: 2}
-    _brainsToControl:
-    - {fileID: 11400000, guid: 2c1d51b7167874f31beda0b0cf0af468, type: 2}
+    _brainsToControl: []
   maxSteps: 50000
   trainingConfiguration:
     width: 84
@@ -170,7 +169,7 @@ MonoBehaviour:
   goalPref: {fileID: 1508142483324970, guid: 1ec4e4e96e7514d45b7ebc3ba5a9a481, type: 2}
   pitPref: {fileID: 1811317785436014, guid: d13ee2db77b3a4dcc8664d2fe2a0f219, type: 2}
   sWallPref: {fileID: 1306125966701126, guid: 00a404284acc3ec4994d8d1af68fe0ed, type: 2}
-  ExReword: {fileID: 1793501441665780, guid: b030efb774c60644596247030340975c, type: 2}
+  exReword: {fileID: 1793501441665780, guid: b030efb774c60644596247030340975c, type: 2}
 --- !u!4 &2047664
 Transform:
   m_ObjectHideFlags: 0
@@ -602,7 +601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03c34e8f2f49840439e5959670648ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brain: {fileID: 11400000, guid: 2c1d51b7167874f31beda0b0cf0af468, type: 2}
+  brain: {fileID: 11400000, guid: d41665f2fb9ad6a469449c2eae467e78, type: 2}
   agentParameters:
     agentCameras: []
     agentRenderTextures:
@@ -614,6 +613,9 @@ MonoBehaviour:
   timeBetweenDecisionsAtInference: 0.15
   renderCamera: {fileID: 489340228}
   maskActions: 1
+  acquisitionRate: 1
+  shorteningRate: 1
+  graspingRate: 1
 --- !u!54 &858783325
 Rigidbody:
   m_ObjectHideFlags: 0
