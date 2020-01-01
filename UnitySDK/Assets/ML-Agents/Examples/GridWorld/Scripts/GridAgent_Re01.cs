@@ -19,6 +19,12 @@ public class GridAgent_Re01 : Agent
              "masking turned on may not behave optimally when action masking is turned off.")]
     public bool maskActions = true;
 
+    //Parameters
+    public float acquisitionRate;
+    public float shorteningRate;
+    public float graspingRate;
+    //
+
     private const int NoAction = 0;  // do nothing!
     private const int Up = 1;
     private const int Down = 2;
