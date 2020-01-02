@@ -122,13 +122,13 @@ public class GridAgent_Re01 : Agent
             // 各オブジェクトの判定
             if (blockTest.Where(col => col.gameObject.CompareTag("mappingCube")).ToArray().Length == 1)
             {
-                SetReward(0.05f);
-                Debug.Log("Reward：-0.1f");
+                SetReward(0.01f * graspingRate);
+                Debug.Log("Reward：" + (0.01f * graspingRate));
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("sWall")).ToArray().Length == 1)
             {
-                SetReward(-0.1f);
-                Debug.Log("Reward：-0.1f");
+                SetReward(-0.5f);
+                Debug.Log("Reward：-0.5f");
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("exReword")).ToArray().Length == 1)
             {
