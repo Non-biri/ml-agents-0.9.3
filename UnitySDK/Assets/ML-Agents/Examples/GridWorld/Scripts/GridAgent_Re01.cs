@@ -87,6 +87,7 @@ public class GridAgent_Re01 : Agent
     public override void AgentAction(float[] vectorAction, string textAction)
     {
         AddReward(-0.01f);
+        Debug.Log("Reward：-0.01f");
         stepReword += -0.01f;
 
         int action = Mathf.FloorToInt(vectorAction[0]);
