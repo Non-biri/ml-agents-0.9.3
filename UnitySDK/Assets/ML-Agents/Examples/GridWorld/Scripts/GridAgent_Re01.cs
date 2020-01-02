@@ -87,7 +87,7 @@ public class GridAgent_Re01 : Agent
     public override void AgentAction(float[] vectorAction, string textAction)
     {
         AddReward(-0.01f);
-        Debug.Log("Reward：-0.01f");
+        Debug.Log("AC_Reward：-0.01f");
         stepReword += -0.01f;
 
         int action = Mathf.FloorToInt(vectorAction[0]);
@@ -124,30 +124,30 @@ public class GridAgent_Re01 : Agent
             if (blockTest.Where(col => col.gameObject.CompareTag("mappingCube")).ToArray().Length == 1)
             {
                 SetReward(0.01f * graspingRate);
-                Debug.Log("Reward：" + (0.01f * graspingRate));
+                Debug.Log("MC_Reward：" + (0.01f * graspingRate));
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("sWall")).ToArray().Length == 1)
             {
                 SetReward(-0.5f);
-                Debug.Log("Reward：-0.5f");
+                Debug.Log("SW_Reward：-0.5f");
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("exReword")).ToArray().Length == 1)
             {
                 SetReward(0.2f * acquisitionRate);
-                Debug.Log("Reward：" + (0.2f * acquisitionRate));
+                Debug.Log("EX_Reward：" + (0.2f * acquisitionRate));
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("goal")).ToArray().Length == 1)
             {
                 Done();
                 float goalReword = 1f + (stepReword * shorteningRate);
                 SetReward(goalReword);
-                Debug.Log("Reward：" + goalReword);
+                Debug.Log("GO_Reward：" + goalReword);
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("pit")).ToArray().Length == 1)
             {
                 Done();
                 SetReward(-1f);
-                Debug.Log("Reward：-1f");
+                Debug.Log("PI_Reward：-1f");
             }
         }
     }
