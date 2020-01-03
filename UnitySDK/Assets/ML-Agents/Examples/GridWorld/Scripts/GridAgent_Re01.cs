@@ -123,32 +123,36 @@ public class GridAgent_Re01 : Agent
             // 各オブジェクトの判定
             if (blockTest.Where(col => col.gameObject.CompareTag("mappingCube")).ToArray().Length == 1)
             {
-                SetReward(0.01f * graspingRate);
-                Debug.Log("MC_Reward：" + (0.01f * graspingRate));
+                float reword = 0.01f * graspingRate;
+                SetReward(reword);
+                Debug.Log("MC_Reward：" + reword);
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("sWall")).ToArray().Length == 1)
             {
-                SetReward(-0.5f);
-                Debug.Log("SW_Reward：-0.5f");
+                float reword = -0.012f;
+                SetReward(reword);
+                Debug.Log("SW_Reward：" + reword);
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("exReword")).ToArray().Length == 1)
             {
-                SetReward(0.2f * acquisitionRate);
-                Debug.Log("EX_Reward：" + (0.2f * acquisitionRate));
+                float reword = 0.3f * acquisitionRate;
+                SetReward(reword);
+                Debug.Log("EX_Reward：" + reword);
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("goal")).ToArray().Length == 1)
             {
                 Done();
-                float goalReword = 1f + (stepReword * shorteningRate);
-                SetReward(goalReword);
+                float reword = 1f + (stepReword * shorteningRate);
+                SetReward(reword);
                 Debug.Log("GO_RewardGet");
-                Debug.Log("GO_Reward：" + goalReword);
+                Debug.Log("GO_Reward：" + reword);
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("pit")).ToArray().Length == 1)
             {
                 Done();
-                SetReward(-1f);
-                Debug.Log("PI_Reward：-1f");
+                float reword = -1f;
+                SetReward(reword);
+                Debug.Log("PI_Reward：" + reword);
             }
         }
     }
