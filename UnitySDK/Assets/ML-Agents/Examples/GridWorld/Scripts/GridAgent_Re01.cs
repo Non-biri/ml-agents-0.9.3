@@ -141,6 +141,7 @@ public class GridAgent_Re01 : Agent
                 Done();
                 float goalReword = 1f + (stepReword * shorteningRate);
                 SetReward(goalReword);
+                Debug.Log("GO_RewardGet");
                 Debug.Log("GO_Reward：" + goalReword);
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("pit")).ToArray().Length == 1)
