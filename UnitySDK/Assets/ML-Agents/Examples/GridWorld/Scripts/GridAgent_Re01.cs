@@ -87,11 +87,12 @@ public class GridAgent_Re01 : Agent
     public override void AgentAction(float[] vectorAction, string textAction)
     {
         AddReward(-0.01f);
-        Debug.Log("AC_Reward：-0.01f");
+        Debug.Log("AC_Reward：-0.005f");
         stepReword += -0.01f;
 
         int action = Mathf.FloorToInt(vectorAction[0]);
 
+        Vector3 previousPos = transform.position;
         Vector3 targetPos = transform.position;
         switch (action)
         {
@@ -129,20 +130,21 @@ public class GridAgent_Re01 : Agent
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("sWall")).ToArray().Length == 1)
             {
-                float reword = -0.02f;
+                transform.position = previousPos;
+                float reword = -0.05f;
                 SetReward(reword);
                 Debug.Log("SW_Reward：" + reword);
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("exReword")).ToArray().Length == 1)
             {
-                float reword = 0.2f * acquisitionRate;
+                float reword = 0.15f * acquisitionRate;
                 SetReward(reword);
                 Debug.Log("EX_Reward：" + reword);
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("goal")).ToArray().Length == 1)
             {
                 Done();
-                float reword = 1f + (stepReword * (shorteningRate / 100));
+                float reword = 1f + (stepReword * shorteningRate);
                 SetReward(reword);
                 Debug.Log("GO_RewardGet");
                 Debug.Log("GO_Reward：" + reword);
