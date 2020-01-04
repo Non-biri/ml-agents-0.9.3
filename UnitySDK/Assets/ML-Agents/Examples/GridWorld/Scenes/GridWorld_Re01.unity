@@ -150,7 +150,7 @@ MonoBehaviour:
     width: 84
     height: 84
     qualityLevel: 1
-    timeScale: 15
+    timeScale: 20
     targetFrameRate: -1
   inferenceConfiguration:
     width: 1280
@@ -168,7 +168,7 @@ MonoBehaviour:
   agentPref: {fileID: 1657514749044530, guid: 628960e910f094ad1909ecc88cc8016d, type: 2}
   goalPref: {fileID: 1508142483324970, guid: 1ec4e4e96e7514d45b7ebc3ba5a9a481, type: 2}
   pitPref: {fileID: 1811317785436014, guid: d13ee2db77b3a4dcc8664d2fe2a0f219, type: 2}
-  sWallPref: {fileID: 1306125966701126, guid: 00a404284acc3ec4994d8d1af68fe0ed, type: 2}
+  sWallPref: {fileID: 1177842109621104, guid: 382f5b171ec90a743b5af375c874e642, type: 2}
   exReword: {fileID: 1793501441665780, guid: b030efb774c60644596247030340975c, type: 2}
   mappingCube: {fileID: 1548778438723760, guid: dbd28be9cc3aa854993e3eb7be2c71d6,
     type: 2}
@@ -615,9 +615,9 @@ MonoBehaviour:
   timeBetweenDecisionsAtInference: 0.15
   renderCamera: {fileID: 489340228}
   maskActions: 1
-  acquisitionRate: 2
-  shorteningRate: 0.1
-  graspingRate: 15
+  acquisitionRate: 1
+  shorteningRate: 1
+  graspingRate: 1
 --- !u!54 &858783325
 Rigidbody:
   m_ObjectHideFlags: 0
