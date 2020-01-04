@@ -23,7 +23,7 @@ default:
             gamma: 0.99
 
 GridWorldReLearning:
-    batch_size: 32
+    batch_size: 64
     normalize: false
     num_layers: 1
     hidden_units: 256
