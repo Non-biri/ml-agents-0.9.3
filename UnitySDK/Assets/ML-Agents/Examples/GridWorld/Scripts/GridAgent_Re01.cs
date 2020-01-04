@@ -87,8 +87,8 @@ public class GridAgent_Re01 : Agent
     public override void AgentAction(float[] vectorAction, string textAction)
     {
         AddReward(-0.01f);
-        Debug.Log("AC_Reward：-0.005f");
-        stepReword += -0.01f;
+        Debug.Log("AC_Reward：-0.01f");
+        stepReword += 0.005f;
 
         int action = Mathf.FloorToInt(vectorAction[0]);
 
@@ -124,7 +124,7 @@ public class GridAgent_Re01 : Agent
             // 各オブジェクトの判定
             if (blockTest.Where(col => col.gameObject.CompareTag("mappingCube")).ToArray().Length == 1)
             {
-                float reword = 0.01f * graspingRate;
+                float reword = 0.015f * graspingRate;
                 SetReward(reword);
                 Debug.Log("MC_Reward：" + reword);
             }
@@ -144,7 +144,7 @@ public class GridAgent_Re01 : Agent
             if (blockTest.Where(col => col.gameObject.CompareTag("goal")).ToArray().Length == 1)
             {
                 Done();
-                float reword = 1f + (stepReword * shorteningRate);
+                float reword = 1f - (stepReword * shorteningRate);
                 SetReward(reword);
                 Debug.Log("GO_RewardGet");
                 Debug.Log("GO_Reward：" + reword);
