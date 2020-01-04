@@ -131,7 +131,7 @@ public class GridAgent_Re01 : Agent
             if (blockTest.Where(col => col.gameObject.CompareTag("sWall")).ToArray().Length == 1)
             {
                 transform.position = previousPos;
-                float reword = -0.05f;
+                float reword = -0.02f;
                 SetReward(reword);
                 Debug.Log("SW_Reward：" + reword);
             }
