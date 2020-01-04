@@ -129,13 +129,13 @@ public class GridAgent_Re01 : Agent
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("sWall")).ToArray().Length == 1)
             {
-                float reword = -0.015f;
+                float reword = -0.02f;
                 SetReward(reword);
                 Debug.Log("SW_Reward：" + reword);
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("exReword")).ToArray().Length == 1)
             {
-                float reword = 0.3f * acquisitionRate;
+                float reword = 0.2f * acquisitionRate;
                 SetReward(reword);
                 Debug.Log("EX_Reward：" + reword);
             }
