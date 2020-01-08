@@ -102,3 +102,12 @@ venv/
 
 # Code coverage report
 .coverage
+
+#フォルダsummariesを除外
+summaries/
+
+#フォルダmodelsを除外
+models/
+
+#UnitySDK/Build_file/以下は除外
+UnitySDK/Build_file/
