@@ -19,6 +19,13 @@ public class GridAgent_Re01 : Agent
              "masking turned on may not behave optimally when action masking is turned off.")]
     public bool maskActions = true;
 
+    //Parameters
+    public float acquisitionRate;   //追加報酬を得た時のバイアス
+    public float shorteningRate;    //時間に応じて目標達成時にかかるバイアス
+    public float graspingRate;      //マッピング度合いによってかかるバイアス
+                                    //
+    private float stepReword;       //
+
     private const int NoAction = 0;  // do nothing!
     private const int Up = 1;
     private const int Down = 2;
@@ -80,8 +87,12 @@ public class GridAgent_Re01 : Agent
     public override void AgentAction(float[] vectorAction, string textAction)
     {
         AddReward(-0.01f);
+        Debug.Log("AC_Reward：-0.01f");
+        stepReword += 0.005f;
+
         int action = Mathf.FloorToInt(vectorAction[0]);
 
+        Vector3 previousPos = transform.position;
         Vector3 targetPos = transform.position;
         switch (action)
         {
@@ -111,27 +122,39 @@ public class GridAgent_Re01 : Agent
             transform.position = targetPos;
 
             // 各オブジェクトの判定
+            if (blockTest.Where(col => col.gameObject.CompareTag("mappingCube")).ToArray().Length == 1)
+            {
+                float reword = 0.015f * graspingRate;
+                SetReward(reword);
+                Debug.Log("MC_Reward：" + reword);
+            }
             if (blockTest.Where(col => col.gameObject.CompareTag("sWall")).ToArray().Length == 1)
             {
-                SetReward(-0.05f);
-                Debug.Log("Reward：-0.05f");
+                transform.position = previousPos;
+                float reword = -0.02f;
+                SetReward(reword);
+                Debug.Log("SW_Reward：" + reword);
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("exReword")).ToArray().Length == 1)
             {
-                SetReward(0.01f);
-                Debug.Log("Reward：0.1f");
+                float reword = 0.15f * acquisitionRate;
+                SetReward(reword);
+                Debug.Log("EX_Reward：" + reword);
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("goal")).ToArray().Length == 1)
             {
                 Done();
-                SetReward(1f);
-                Debug.Log("Reward：1f");
+                float reword = 1f - (1f / shorteningRate * (stepReword * stepReword));
+                SetReward(reword);
+                Debug.Log("GO_RewardGet");
+                Debug.Log("GO_Reward：" + reword);
             }
             if (blockTest.Where(col => col.gameObject.CompareTag("pit")).ToArray().Length == 1)
             {
                 Done();
-                SetReward(-1f);
-                Debug.Log("Reward：-1f");
+                float reword = -1f;
+                SetReward(reword);
+                Debug.Log("PI_Reward：" + reword);
             }
         }
     }
@@ -140,6 +163,7 @@ public class GridAgent_Re01 : Agent
     public override void AgentReset()
     {
         academy.AcademyReset();
+        stepReword = 0f;
     }
 
     public void FixedUpdate()

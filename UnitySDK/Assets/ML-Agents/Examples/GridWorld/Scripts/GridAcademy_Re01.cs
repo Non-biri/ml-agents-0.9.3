@@ -24,7 +24,8 @@ public class GridAcademy_Re01 : Academy
     public GameObject goalPref;
     public GameObject pitPref;
     public GameObject sWallPref;
-    public GameObject ExReword;
+    public GameObject exReword;
+    public GameObject mappingCube;
 
     GameObject[] objects;
 
@@ -36,16 +37,16 @@ public class GridAcademy_Re01 : Academy
 
     ///迷路のマッピング処理
     ///agentPref：0, goalPref：1, pitPref：2, WallPref：3, ExReword：4
-    public int[,] mapping = new int[10, 10] { {9,3,2,9,9,3,9,9,9,4},
-                                            {9,3,3,3,9,3,9,3,3,3},
-                                            {9,9,9,3,9,3,9,9,3,2},
-                                            {3,3,9,3,9,3,3,9,3,9},
-                                            {3,9,9,9,9,9,9,9,9,9},
-                                            {9,9,3,3,3,9,3,3,3,9},
-                                            {9,3,3,4,3,9,9,3,4,9},
-                                            {9,9,3,9,3,3,9,9,9,3},
-                                            {3,9,3,9,3,9,9,3,9,3},
-                                            {3,9,9,9,3,2,3,3,9,1}};
+    public int[,] mapping = new int[10, 10] { {9,3,2,5,5,3,5,5,5,4},
+                                            {5,3,3,3,5,3,5,3,3,3},
+                                            {5,5,5,3,5,3,5,5,3,2},
+                                            {3,3,5,3,5,3,3,5,3,5},
+                                            {3,5,5,5,5,5,5,5,5,5},
+                                            {5,5,3,3,3,5,3,3,3,5},
+                                            {5,3,3,4,3,5,5,3,4,5},
+                                            {5,5,3,5,3,3,5,5,5,3},
+                                            {3,5,3,5,3,5,5,3,5,3},
+                                            {3,5,5,5,3,2,3,3,5,1}};
 
 
     public override void InitializeAcademy()
@@ -55,7 +56,7 @@ public class GridAcademy_Re01 : Academy
 
         cam = camObject.GetComponent<Camera>();
 
-        objects = new GameObject[5] { agentPref, goalPref, pitPref, sWallPref, ExReword };
+        objects = new GameObject[6] { agentPref, goalPref, pitPref, sWallPref, exReword, mappingCube };
 
         agentCam = GameObject.Find("agentCam").GetComponent<Camera>();
 
