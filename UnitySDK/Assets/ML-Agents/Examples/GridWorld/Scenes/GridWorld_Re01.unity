@@ -616,7 +616,7 @@ MonoBehaviour:
   timeBetweenDecisionsAtInference: 0.15
   renderCamera: {fileID: 489340228}
   maskActions: 1
-  acquisitionRate: 30
+  acquisitionRate: 1
   shorteningRate: 1
   graspingRate: 1
 --- !u!54 &858783325
