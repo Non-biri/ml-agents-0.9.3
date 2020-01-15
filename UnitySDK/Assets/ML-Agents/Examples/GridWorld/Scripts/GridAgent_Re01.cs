@@ -135,7 +135,7 @@ public class GridAgent_Re01 : Agent
                 SetReward(reword);
                 Debug.Log("SW_Reward：" + reword);
             }
-            if (blockTest.Where(col => col.gameObject.CompareTag("exReword")).ToArray().Length == 1)
+            if (blockTest.Where(col => col.gameObject.CompareTag("exReward")).ToArray().Length == 1)
             {
                 float reword = 0.15f * acquisitionRate;
                 SetReward(reword);
@@ -199,7 +199,7 @@ public class GridAgent_Re01 : Agent
     /*
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.name == "exReword")
+        if (collider.gameObject.name == "exReward")
             academy.DestroyExReword(collider);
     }
     */
