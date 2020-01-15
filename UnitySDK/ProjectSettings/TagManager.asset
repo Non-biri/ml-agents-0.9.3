@@ -26,10 +26,10 @@ TagManager:
   - pyramid
   - switchOn
   - stone
-  - exReword
   - sWall
   - Undefined
   - mappingCube
+  - exReward
   layers:
   - Default
   - TransparentFX
