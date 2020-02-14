@@ -8,6 +8,18 @@ This is a repository created for my own ML-Agent research and Git practice.
 It has nothing to do with the original Unity ML-Agents. There is no guarantee that it will work.
 Please use all at your own risk.
 
+# Abstract
+
+
+# Setup
+
+
+# Expected results
+
+
+
+# --------------------
+
 <img src="docs/images/unity-wide.png" align="middle" width="3000"/>
 
 <img src="docs/images/image-banner.png" align="middle" width="3000"/>
