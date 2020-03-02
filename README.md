@@ -10,6 +10,9 @@ Please use all at your own risk.
 
 # Abstract
 
+これはUnity社が公開している機械学習用フレームワーク「Unity ML-Agents」を利用した
+10×10の迷路内で3種類の性格パラメータを持たせたエージェント
+
 
 # Setup
 
