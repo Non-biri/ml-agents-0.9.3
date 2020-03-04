@@ -1,23 +1,67 @@
 # ！Attention！
 
-これはNON-biri自身のML-Agentを用いた研究とGitの練習のために作成されたリポジトリです。
-元のUnity ML-Agentsとは関係ありません。また動作する保証もありません
+これはNon-biriがML-Agentを用いた卒業研究とGitの練習のために作成したリポジトリです。
+元のUnity ML-Agentsとは関係ありません。また動作する保証もありません。
+利用にはUnity EditorやAnacondaに関する基礎的な知識が知識が必要となります。
+これを使用することで起きた損害、被害等に関して作成者は一切責任を負いません。
 ご利用の際は全て自己責任でお願いいたします。
 
-This is a repository created for my own ML-Agent research and Git practice.
+This is a repository created by Non-biri for graduation research and Git practice using ML-Agent.
 It has nothing to do with the original Unity ML-Agents. There is no guarantee that it will work.
-Please use all at your own risk.
+Use requires basic knowledge of Unity Editor and Anaconda.
+The creator is not responsible for any damage or damage caused by using this.
+Please use it at your own risk.
 
-# Abstract
+## Abstract
 
-これはUnity社が公開している機械学習用フレームワーク「Unity ML-Agents」を利用した
-10×10の迷路内で3種類の性格パラメータを持たせたエージェント
+これはUnity社が公開している機械学習用フレームワーク「Unity ML-Agents」のサンプルを改造モデルです。
+サンプル「GridWorld」を改造して10×10の迷路環境を構築しています。
+また、エージェントに3種類の性格パラメータを持たせ、それを調整することで学習に個性が現れないか検証することが出来ます。
+
+## Setup
+以下の環境で実装しました。セットアップの手順はML-Agentsの公式ドキュメントに従いつつ各所で読み替えて実装してください。
+Unity Editorのバージョンは2017.4以上であっても動く可能性がありますが未検証です。
+
+―――――
+OS : Windows10
+Unity Hub 2.2.X (2.2以上)
+Unity Editor Version 2017.4.10f1
+Visual Studio Community 2017
+
+ML-Agents Download Repository tag : 0.9.3
+
+Anaconda : 2019.10
+Python : 3.6.9
+仮想環境にインストールしたML-AgentsのVersion : 0.9.3
+―――――
+
+## Experiment
+
+Assets>ML-Agents>Example>GridWorld>Scenes>GridWorld_Re で対象のSceneを開くことが出来ます。
+
+サンプル「GridWorld」との大きな変更点に以下ような内容があります。
+
+*「trueAgent」に以下の三種類のパラメータの追加
+
+・「acquisitionRate」	初期値：1	範囲：1～50
+　追加報酬（〇）を優先する性格になる．値を増 加させることで追加報酬に接触した際に得られる報酬量を増加させられる．
+
+・「shorteningRate」	初期値：1	範囲：0～1
+　ゴール（＋）に優先する性格になる．経過したステップ数に反比例して報酬量を減少させる．
+
+・「graspingRate」	初期値：1	範囲：1～50
+　探索報酬（半透明の□）を優先する性格になる．接触した際の報酬を計算する際に用いる値を保存する．
+
+*環境に報酬を与える三種類の新たなオブジェクト要素の追加
+・sWallPref：壁（灰色の□）
+・exReward：追加報酬（〇）
+・mappingCube：探索報酬（半透明の□） 
 
 
-# Setup
+Unity Editorのplayボタンを押して実行すると、既に適用されている学習モデルを用いて動作します。
 
 
-# Expected results
+## Expected results
 
 
 
