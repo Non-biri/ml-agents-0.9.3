@@ -23,16 +23,16 @@ Please use it at your own risk.
 Unity Editorのバージョンは2017.4以上であっても動く可能性がありますが未検証です。
 
 ―――――
-OS : Windows10
-Unity Hub 2.2.X (2.2以上)
-Unity Editor Version 2017.4.10f1
-Visual Studio Community 2017
+* OS : Windows10
+* Unity Hub 2.2.X (2.2以上)
+* Unity Editor Version 2017.4.10f1
+* Visual Studio Community 2017
 
-ML-Agents Download Repository tag : 0.9.3
+* ML-Agents Download Repository tag : 0.9.3
 
-Anaconda : 2019.10
-Python : 3.6.9
-仮想環境にインストールしたML-AgentsのVersion : 0.9.3
+* Anaconda : 2019.10
+* Python : 3.6.9
+* 仮想環境にインストールしたML-AgentsのVersion : 0.9.3
 ―――――
 
 ## Experiment
