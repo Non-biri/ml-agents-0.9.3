@@ -41,7 +41,7 @@ Assets>ML-Agents>Example>GridWorld>Scenes>GridWorld_Re で対象のSceneを開�
 
 サンプル「GridWorld」との大きな変更点に以下ような内容があります。
 
-**「trueAgent」に以下の三種類のパラメータの追加 **
+**「trueAgent」に以下の三種類のパラメータの追加**
 
 * 「acquisitionRate」	初期値：1	範囲：1～50
 　追加報酬（〇）を優先する性格になる．値を増 加させることで追加報酬に接触した際に得られる報酬量を増加させられる．
@@ -52,7 +52,7 @@ Assets>ML-Agents>Example>GridWorld>Scenes>GridWorld_Re で対象のSceneを開�
 * 「graspingRate」	初期値：1	範囲：1～50
 　探索報酬（半透明の□）を優先する性格になる．接触した際の報酬を計算する際に用いる値を保存する．
 
-** エージェントに報酬を与える三種類のオブジェクト要素の追加 **
+**エージェントに報酬を与える三種類のオブジェクト要素の追加**
 * sWallPref：壁（灰色の□）
 * exReward：追加報酬（〇）
 * mappingCube：探索報酬（半透明の□） 
