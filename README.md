@@ -41,21 +41,21 @@ Assets>ML-Agents>Example>GridWorld>Scenes>GridWorld_Re で対象のSceneを開�
 
 サンプル「GridWorld」との大きな変更点に以下ような内容があります。
 
-*「trueAgent」に以下の三種類のパラメータの追加
+**「trueAgent」に以下の三種類のパラメータの追加 **
 
-・「acquisitionRate」	初期値：1	範囲：1～50
+* 「acquisitionRate」	初期値：1	範囲：1～50
 　追加報酬（〇）を優先する性格になる．値を増 加させることで追加報酬に接触した際に得られる報酬量を増加させられる．
 
-・「shorteningRate」	初期値：1	範囲：0～1
+* 「shorteningRate」	初期値：1	範囲：0～1
 　ゴール（＋）に優先する性格になる．経過したステップ数に反比例して報酬量を減少させる．
 
-・「graspingRate」	初期値：1	範囲：1～50
+* 「graspingRate」	初期値：1	範囲：1～50
 　探索報酬（半透明の□）を優先する性格になる．接触した際の報酬を計算する際に用いる値を保存する．
 
-*環境に報酬を与える三種類の新たなオブジェクト要素の追加
-・sWallPref：壁（灰色の□）
-・exReward：追加報酬（〇）
-・mappingCube：探索報酬（半透明の□） 
+** エージェントに報酬を与える三種類のオブジェクト要素の追加 **
+* sWallPref：壁（灰色の□）
+* exReward：追加報酬（〇）
+* mappingCube：探索報酬（半透明の□） 
 
 
 Unity Editorのplayボタンを押して実行すると、既に適用されている学習モデルを用いて動作します。
