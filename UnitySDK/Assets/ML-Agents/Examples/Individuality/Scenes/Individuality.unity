@@ -138,17 +138,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2047662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8f569d488fceb948858f516c21e0813, type: 3}
+  m_Script: {fileID: 11500000, guid: 705417c9a6104da4ca3b33f3d8fcdac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   broadcastHub:
     broadcastingBrains:
-    - {fileID: 11400000, guid: d41665f2fb9ad6a469449c2eae467e78, type: 2}
-    - {fileID: 11400000, guid: 8096722eb0a294871857e202e0032082, type: 2}
     - {fileID: 11400000, guid: 7b44b9b879aac5b458eb883e5a3864f3, type: 2}
-    _brainsToControl:
-    - {fileID: 11400000, guid: 2c1d51b7167874f31beda0b0cf0af468, type: 2}
-    - {fileID: 11400000, guid: 7b44b9b879aac5b458eb883e5a3864f3, type: 2}
+    _brainsToControl: []
   maxSteps: 0
   trainingConfiguration:
     width: 84
@@ -169,12 +165,12 @@ MonoBehaviour:
   trueAgent: {fileID: 858783320}
   gridSize: 10
   camObject: {fileID: 99095112}
-  agentPref: {fileID: 1657514749044530, guid: 628960e910f094ad1909ecc88cc8016d, type: 3}
-  goalPref: {fileID: 1508142483324970, guid: 1ec4e4e96e7514d45b7ebc3ba5a9a481, type: 3}
-  pitPref: {fileID: 1811317785436014, guid: d13ee2db77b3a4dcc8664d2fe2a0f219, type: 3}
-  sWallPref: {fileID: 1177842109621104, guid: 382f5b171ec90a743b5af375c874e642, type: 3}
-  exReward: {fileID: 1793501441665780, guid: b030efb774c60644596247030340975c, type: 3}
-  mappingCube: {fileID: 1548778438723760, guid: dbd28be9cc3aa854993e3eb7be2c71d6,
+  agentPref: {fileID: 1657514749044530, guid: 824d970c4a4fbe142ba0d36def21e8a9, type: 3}
+  goalPref: {fileID: 1508142483324970, guid: b77cea8c3bd0b284f942142e424694f1, type: 3}
+  pitPref: {fileID: 1811317785436014, guid: c3301868443b3394fa15a402d5e2a146, type: 3}
+  sWallPref: {fileID: 1177842109621104, guid: db0d872af4a42fc4b895ef7a4c25fab0, type: 3}
+  exReward: {fileID: 1793501441665780, guid: 41ec909a3f0db2c43a8a6ff8536f68c0, type: 3}
+  mappingCube: {fileID: 1548778438723760, guid: 1801d89223a1dee4a8a74e15ca7c30d5,
     type: 3}
 --- !u!4 &2047664
 Transform:
@@ -640,18 +636,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 858783320}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03c34e8f2f49840439e5959670648ca0, type: 3}
+  m_Script: {fileID: 11500000, guid: a66d30c367165e940a91ff2e82ee8cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   brain: {fileID: 11400000, guid: 7b44b9b879aac5b458eb883e5a3864f3, type: 2}
   agentParameters:
     agentCameras: []
     agentRenderTextures:
-    - {fileID: 8400000, guid: 114608d5384404f89bff4b6f88432958, type: 2}
+    - {fileID: 8400000, guid: 87d39006b0de3954a929cb0058bddeae, type: 2}
     maxStep: 200
     resetOnDone: 1
     onDemandDecision: 1
-    numberOfActionsBetweenDecisions: 1
+    numberOfActionsBetweenDecisions: 200
   timeBetweenDecisionsAtInference: 0.15
   renderCamera: {fileID: 489340228}
   maskActions: 1
