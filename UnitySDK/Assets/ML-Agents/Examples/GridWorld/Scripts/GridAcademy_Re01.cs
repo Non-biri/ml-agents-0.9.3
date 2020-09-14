@@ -46,7 +46,7 @@ public class GridAcademy_Re01 : Academy
                                             {5,3,3,4,3,5,5,3,4,5},
                                             {5,5,3,5,3,3,5,5,5,3},
                                             {3,5,3,5,3,5,5,3,5,3},
-                                            {3,5,5,5,3,2,3,3,5,4}};
+                                            {3,5,5,5,3,2,3,3,5,1}};
 
 
     public override void InitializeAcademy()
