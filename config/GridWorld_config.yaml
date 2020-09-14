@@ -37,7 +37,7 @@ GridWorldReLearning:
             strength: 1.0
             gamma: 0.9
 
-Re_Goal_Le:
+Individuality_Learning:
     batch_size: 32
     normalize: false
     num_layers: 1
