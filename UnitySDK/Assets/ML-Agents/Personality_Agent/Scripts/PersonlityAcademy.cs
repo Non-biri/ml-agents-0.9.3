@@ -1,18 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MLAgents;
 
-public class Academy : MonoBehaviour
+public class PersonlityAcademy : Academy
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void InitializeAcademy()
     {
-        
+        base.InitializeAcademy();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void AcademyReset()
     {
-        
+        base.AcademyReset();
+    }
+
+    public override void AcademyStep()
+    {
+        base.AcademyStep();
     }
 }
