@@ -19,4 +19,11 @@ public class PersonlityAcademy : Academy
     {
         base.AcademyStep();
     }
+
+
+    public void SetEnvironment()
+    {
+
+    }
+
 }
