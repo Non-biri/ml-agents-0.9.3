@@ -5,9 +5,13 @@ using MLAgents;
 
 public class PersonlityAgent : Agent
 {
+    public GameObject CrossWall;
+
     public bool useVectorObs;
+    RayPerception rayPer;
     Rigidbody agentRB;
     PersonlityAcademy academy;
+
 
 
 
@@ -15,19 +19,27 @@ public class PersonlityAgent : Agent
     public override void InitializeAgent()
     {
         base.InitializeAgent();
+        academy = FindObjectOfType<PersonlityAcademy>();
+        rayPer = GetComponent<RayPerception>();
+        agentRB = GetComponent<Rigidbody>();
+        // groundRenderer = ground.GetComponent<Renderer>();
+        // groundMaterial = groundRenderer.material;
     }
 
 
     public override void CollectObservations()
     {
+        base.CollectObservations();
+
         if (useVectorObs)
         {
-            float reyDistanse = 12f;
-            float[] reyAngles = { 20f, 60f, 90f, 120f, 160f };
-            string[] detectableObjects = { "Wall" };
+            float rayDistance = 12f;
+            float[] rayAngles = { 20f, 60f, 90f, 120f, 160f };
+            string[] detectableObjects = { "wall" };
+            AddVectorObs(GetStepCount() / (float)agentParameters.maxStep);
+            AddVectorObs(rayPer.Perceive(rayDistance, rayAngles, detectableObjects, 0f, 0f));
 
         }
-        base.CollectObservations();
     }
 
 
@@ -69,6 +81,8 @@ public class PersonlityAgent : Agent
     public override void AgentAction(float[] vectorAction, string textAction)
     {
         base.AgentAction(vectorAction, textAction);
+        AddReward(-1f / agentParameters.maxStep);
+        MoveAgent(vectorAction);
     }
 
 
