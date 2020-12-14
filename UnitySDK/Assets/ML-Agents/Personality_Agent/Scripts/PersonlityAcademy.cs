@@ -5,9 +5,15 @@ using MLAgents;
 
 public class PersonlityAcademy : Academy
 {
+
+    public float agentRunSpeed;
+    public float agentRotationSpeed;
+    public float gravityMultiplier;
+
     public override void InitializeAcademy()
     {
         base.InitializeAcademy();
+        Physics.gravity *= gravityMultiplier;
     }
 
     public override void AcademyReset()
