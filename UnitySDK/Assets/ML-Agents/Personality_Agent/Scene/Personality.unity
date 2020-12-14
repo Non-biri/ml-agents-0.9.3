@@ -923,9 +923,9 @@ MonoBehaviour:
     targetFrameRate: 60
   resetParameters:
     resetParameters: []
-  agentRunSpeed: 0
-  agentRotationSpeed: 0
-  gravityMultiplier: 0
+  agentRunSpeed: 0.01
+  agentRotationSpeed: 0.01
+  gravityMultiplier: 1
 --- !u!4 &1055266125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 69282843933997907, guid: cddf158580e956843b3021f5dbe828ee,
@@ -1643,7 +1643,9 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  useVectorObs: 0
+  CrossWall: {fileID: 580662554446463140, guid: f88efb8c3e6b0f04b87b40acdeb39e4b,
+    type: 3}
+  useVectorObs: 1
 --- !u!54 &1815468027
 Rigidbody:
   m_ObjectHideFlags: 0
