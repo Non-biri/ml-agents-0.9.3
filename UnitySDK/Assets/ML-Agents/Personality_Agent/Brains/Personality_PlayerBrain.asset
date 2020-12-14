@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Personality_PlayerBrain
   m_EditorClassIdentifier: 
   brainParameters:
-    vectorObservationSize: 1
-    numStackedVectorObservations: 1
-    vectorActionSize: 01000000
+    vectorObservationSize: 32
+    numStackedVectorObservations: 3
+    vectorActionSize: 05000000
     cameraResolutions: []
     vectorActionDescriptions:
     - 
@@ -30,11 +30,8 @@ MonoBehaviour:
     branchIndex: 0
     value: 2
   - key: 119
-    branchIndex: 2
+    branchIndex: 0
     value: 3
   - key: 115
-    branchIndex: 2
+    branchIndex: 0
     value: 4
-  - key: 32
-    branchIndex: 1
-    value: 9
